@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para a aninha</title>
+
+    <style>
+            body{
+                        background-image: url(https://s3u.tmimgcdn.com/u37752224/13ea8843c050622e2055b313c2392aba.gif);
+            }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Te amo aninha</h1>
+
+        <img src="https://cdn.pixabay.com/animation/2024/01/10/01/45/01-45-52-244_512.gif" height="100" width="200">
+
+        <h2>Aceita minhas humildes desculpas? </h2>
+        <h3>você é a melhor em ser a melhor!</h3>
+        
+
+        <button id="sim" onclick="naoSei()" > Sim </button>
+        <button onmouseover="fuja()" id="nao"> Não </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+        function naoSei(){
+            alert("Agora vai lá lavar a loucinha tá? ")
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
